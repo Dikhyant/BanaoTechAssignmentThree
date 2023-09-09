@@ -1,19 +1,25 @@
 import { View } from "react-native"
-import { createStackNavigator } from "@react-navigation/stack"
+import { createStackNavigator , StackNavigationProp } from "@react-navigation/stack"
 import Home from "../../screens/Home"
 import { CHAT_SCREEN, HOME } from "../../router/constants"
 import ChatScreen from "../../screens/ChatScreen"
+import { Timestamp } from "firebase/firestore"
 
-const Stack = createStackNavigator()
+type MainAppStackParamList = {
+    HOME: undefined;
+    CHAT_SCREEN: {uid: string};
+}
+
+export type MainAppNavigationProp = StackNavigationProp<MainAppStackParamList>;
+
+const Stack = createStackNavigator<MainAppStackParamList>()
 
 const MainAppContainer = () => {
     return (
-        <View>
-            <Stack.Navigator initialRouteName={HOME}>
-                <Stack.Screen name={HOME} component={Home} />
-                <Stack.Screen name={CHAT_SCREEN} component={ChatScreen}/>
-            </Stack.Navigator>
-        </View>
+        <Stack.Navigator initialRouteName={HOME}>
+            <Stack.Screen name={HOME} component={Home} options={{headerStyle: {height: 100}}} />
+            <Stack.Screen name={CHAT_SCREEN} component={ChatScreen} options={{headerStyle: {height: 0}}}/>
+        </Stack.Navigator>
     )
 }
 

@@ -1,0 +1,5 @@
+I apologize.
+I wasn't able to finish the assignment.
+Hence the app doesn't work properly.
+I wrote all the code I was able to like redux, firestore, hooks, etc.
+But I couldn't finish the project.

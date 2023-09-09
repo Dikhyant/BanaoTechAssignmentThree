@@ -1,0 +1,4 @@
+export const ADD_NEW_MESSAGE_TO_CHAT = "ADD_NEW_MESSAGE_TO_CHAT";
+export const ADD_NEW_CHAT = "ADD_NEW_CHAT";
+export const ADD_MESSAGES_TO_CHAT = "ADD_MESSAGES_TO_CHAT";
+export const ADD_CHATS = "ADD_CHATS";

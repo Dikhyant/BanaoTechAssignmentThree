@@ -1,7 +1,7 @@
 import { 
     View,
     Text,
-    ScrollView
+    ScrollView,
  } from "react-native"
 import ChatContainer from "../../components/ChatContainer";
 import { ChatType } from "../../components/common/Chat";
@@ -11,7 +11,7 @@ const Home = () => {
     for(let i = 0; i < 30; i++) {
         chats.push({
             uid: i + "",
-            name: "Bruce" + i
+            name: "Chat " + i
         })
     }
     return (
